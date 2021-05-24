@@ -1,0 +1,15 @@
+<div layout:decorate="views/layout/app">
+	<div layout:fragment="content">
+		<h2>従業員一覧</h2>
+		<table border="1">
+		  <tr>
+		    <th>社員番号</th><th>氏名</th><th>操作</th>
+		  </tr>
+		  <tr th:each="obj : ${data}">
+		    <td th:text="${obj.code}"></td>
+		    <td th:text="${obj.name}"></td>
+		    <td>詳細</td>
+		  </tr>
+		</table>
+	</div>
+</div>
